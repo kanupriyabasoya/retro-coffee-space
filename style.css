@@ -18,7 +18,7 @@ min-height:100vh;
     margin:0 2em;
 }
 nav{
-    min-height:10vh;
+    height:10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,19 +35,37 @@ nav{
 }
 header{
     width:100%;
-    min-height:90vh;
-}
-article{
-    border:2px solid #000;
+    height:90vh;
+    padding-bottom:2em;
     display: grid; 
-    grid-template-columns: 1.4fr 0.8fr 0.8fr; 
-    grid-template-rows: 1.2fr 0.9fr; 
-    gap: 0px 0px; 
+    grid-template-columns:2fr 1fr 1fr;
+    gap:2em; 
     grid-template-areas: 
       "one three four"
       "two three four"; 
 }
-.article-one{
-    grid-row:1/4;
+article{
+    
 }
+.article-one{
+    grid-area:one;
+    background: url("./fancy-check.png");
+  
+}
+.article-two{
+    grid-area:two;
+    background: url("./fancy-pink-heart.jpg");
 
+}
+.article-three{
+    grid-area:three;
+    background: url("./fancy-smiley.png");
+}
+.article-four{
+    grid-area:four;
+    background: url("./fancy-flower.jpg");
+}
+.article{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
