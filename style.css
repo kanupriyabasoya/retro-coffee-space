@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
 html{
     font-size: 62.5%;
 }
@@ -9,10 +10,14 @@ html{
 a{
     text-decoration: none;
 }
+
 body{
-background: url("./main-bg-whitewhite.svg");
 width: 100%;
 min-height:100vh;
+background: url("./pinky-bg.png");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
 }
 .container{
     margin:0 2em;
@@ -21,13 +26,11 @@ nav{
     height:10vh;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    
+    align-items: center; 
 }
 .nav-right{
     display: flex;
     gap:20px;
-    
 }
 .nav-right i{
     font-size:2.5rem;
@@ -39,33 +42,171 @@ header{
     padding-bottom:2em;
     display: grid; 
     grid-template-columns:2fr 1fr 1fr;
-    gap:2em; 
+    gap:20px; 
     grid-template-areas: 
+      "one three four"
       "one three four"
       "two three four"; 
 }
 article{
-    
+    /* border:1px solid #555; */
+    border-radius:20px;
+    box-shadow:0 0 10px #888;
+    background:linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5));
 }
 .article-one{
     grid-area:one;
-    background: url("./fancy-check.png");
-  
+    position: relative;
 }
 .article-two{
     grid-area:two;
-    background: url("./fancy-pink-heart.jpg");
-
 }
 .article-three{
     grid-area:three;
-    background: url("./fancy-smiley.png");
 }
 .article-four{
-    grid-area:four;
-    background: url("./fancy-flower.jpg");
+    grid-area:four; 
 }
-.article{
-    background-repeat: no-repeat;
-    background-size: cover;
+.tab-bar{
+    width:100%;
+    height:30px;
+    border-radius:20px 20px 0 0 ;
+    /* border-bottom:1px solid #555; */
+    text-align: right;
+    font-size:2rem;
+    padding:.3em .6em 0 0;
+}
+.tab-bar-one{
+    background-color: #9EB6FF;
+}
+.tab-bar-two{
+    background-color: #F8B6D9;
+}
+.tab-bar-three{
+    background-color: #FFEA8C;
+}
+.tab-bar-four{
+    background-color: #D09FEE;
+}
+iframe {
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 90%; 
+    height: 80%; 
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 20px auto;
+    border-radius:20px;
+}
+.clocks-div{
+    display: flex;
+    height:90%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.clocks-div > *{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:10px;
+    box-shadow:3px 3px 7px rgba(119, 66, 175, 0.855),-3px -3px 7px #fff, inset -3px -3px 7px #fff,inset 3px 3px 7px rgba(119, 66, 175, 0.855);
+    background: linear-gradient(rgba(255, 128, 223, 0.5),rgba(220, 55, 184, 0.5));
+    color:#fff;
+}
+.digital-clock{
+    width:90%;
+    height:30%;
+    font-size:6rem;
+    font-weight: bold;
+    position: relative;
+    font-family: "Akaya Telivigala", system-ui;
+}
+.digital-clock #hrs:before{
+    content:'TIME';
+    position: absolute;
+    font-size:2rem;
+    color:#515151;
+    top:-20px;
+    left:calc(50% - 20px);
+}
+.pomodoro{
+    width:90%;
+    height:40%;
+    font-size:6rem;
+    font-family: "Akaya Telivigala", system-ui;
+    display: flex;
+    flex-direction: column;
+    position:relative;
+}
+.pomodoro-time .minute::before{
+    content:'POMODORO';
+    position: absolute;
+    font-size:2rem;
+    color:#515151;
+    top:-20px;
+    font-weight: bold;
+    left:calc(50% - 40px);
+}
+ .pomodoro-buttons button{
+    font-size:2rem;
+    padding:.3em .6em;
+    background:#858CE3;
+    color:#fff;
+    border:none;
+    box-shadow: 0 0 3px #444 , inset 0 0 3px #fff;
+    border-radius:5px;
+}
+.start:hover{
+    background: rgb(38, 124, 38);
+    cursor:pointer;
+}
+.stop:hover{
+    background: rgb(176, 53, 53);
+    cursor:pointer;
+}
+.reset:hover{
+    background: rgb(50, 158, 156);
+    cursor:pointer; 
+}
+.todo-list-container{
+    font-size:2rem;
+    margin:0 1em;
+    height:80%;
+}
+.todo-list-input{
+    text-align: center;
+    margin:1em auto;
+}
+.todo-list-input input{
+    font-size: 2rem;
+    padding:.2em 1em;
+    border:none;
+    border-radius: 10px;
+    box-shadow: 0 0 3px #444 , inset 0 0 3px #fff;
+}
+.todo-list-input button{
+    font-size: 2rem;
+    cursor: pointer;
+    background: rgb(38, 124, 38);
+    border: none;
+    border-radius:10px;
+    color:#fff;
+    margin-top:.5em;
+    padding:.2em 1em;
+}
+.todo-list{
+    height:90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.todo-list ul li{
+    list-style-type: circle;
+   
+}
+.bg{
+    background: #c2c2c2;
 }

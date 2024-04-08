@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./index.js" defer></script>
     <title>retro coffee space</title>
 </head>
 <body>
     <div class="container">
 <nav>
     <div class="nav-left">
-        <img src="./logologo.svg" alt="">
+        <img src="./logologo-main.svg" alt="">
     </div>
     <div class="nav-right">
         <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -20,10 +21,72 @@
     </div>
 </nav>
 <header>
-    <article class="article-one article"></article>
-    <article class="article-two article"></article>
-    <article class="article-three article"></article>
-    <article class="article-four article"></article>
+    <article class="article-one article">
+        <div class="tab-bar tab-bar-one">
+            <i class="fa-regular fa-square-minus" style="color:#3d3d3d"></i>
+            <i class="fa-regular fa-window-maximize" style="color: #178060;"></i>
+            <i class="fa-solid fa-square-xmark" style="color: #e00000;"></i>
+        </div>
+        <div class="iframes-div">
+        <!-- <iframe width="520" height="300" src="https://www.youtube.com/embed/xR_66gEcblQ?si=hQIM0fvNIHgV1RwC" title="YouTube video player" controls></iframe> -->
+
+    </div>
+    </article>
+    <article class="article-two article">
+        <div class="tab-bar tab-bar-two">
+            <i class="fa-regular fa-square-minus" style="color:#3d3d3d"></i>
+            <i class="fa-regular fa-window-maximize" style="color: #178060;"></i>
+            <i class="fa-solid fa-square-xmark" style="color: #e00000;"></i>
+        </div>
+    </article>
+    <article class="article-three article">
+        <div class="tab-bar tab-bar-three">
+            <i class="fa-regular fa-square-minus" style="color:#3d3d3d"></i>
+            <i class="fa-regular fa-window-maximize" style="color: #178060;"></i>
+            <i class="fa-solid fa-square-xmark" style="color: #e00000;"></i>
+        </div>
+        <div class="clocks-div">
+            <div class="digital-clock">
+                <div class="time">
+                    <span id="hrs">00</span>
+                    <span>:</span>
+                    <span id="min">00</span>
+                    <span>:</span>
+                    <span id="sec">00</span>
+                </div>
+            </div>
+            <div class="pomodoro">
+                <div class="pomodoro-time">
+                <span class="minute">25</span>
+                <span>:</span>
+                <span class="second">00</span>
+                </div>
+                <div class="pomodoro-buttons">
+                    <button class="start">start</button>
+                    <button class="stop">stop</button>
+                    <button class="reset">reset</button>
+                </div>
+            </div>
+         </div>
+    </article>
+    <article class="article-four article">
+        <div class="tab-bar tab-bar-four">
+            <i class="fa-regular fa-square-minus" style="color:#3d3d3d"></i>
+            <i class="fa-regular fa-window-maximize" style="color: #178060;"></i>
+            <i class="fa-solid fa-square-xmark" style="color: #e00000;"></i>
+        </div>
+        <div class="todo-list-container">
+            <div class="todo-list-input">
+            <input type="text" class="input"> 
+            <button class ="task-button">add task</button>
+        </div>
+        <div class="todo-list">
+            <ul class="append-list-container">
+            </ul>
+            <p>Note: double click on task the to delete it.</p>
+        </div>
+        </div>
+    </article>
 </header>
 </div>
 </body>
